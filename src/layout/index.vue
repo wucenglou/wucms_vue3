@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { Navbar, Sidebar} from './components'
+import { Navbar} from './components'
 // import ResizeMixin from './mixin/ResizeHandler'
 import { mapState } from 'vuex'
 
@@ -28,7 +28,7 @@ export default {
   components: {
     // AppMain,
     Navbar,
-    Sidebar,
+   
     // TagsView
   },
   // mixins: [ResizeMixin],
