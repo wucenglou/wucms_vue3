@@ -12,17 +12,24 @@ const routes = [
     redirect: '/dashboard',
     children: [
       {
-        path: 'dashboard',
+        path: '/dashboard',
         component: ()=> import('@/views/dashboard/index'),
         name: 'Dashboard',
-        meta: { title: 'Dashboard'}
+        meta: { title: '主页' }
       }
     ]
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue')
+    path: '/documentation',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/documentation/index'),
+        name: 'Documentation',
+        meta: { title: 'Documentation', affix: true }
+      }
+    ]
   },
   {
     path: '/login',
